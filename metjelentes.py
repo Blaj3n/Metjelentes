@@ -24,3 +24,23 @@ for egyelem in metjelentes:
 print(ido)
 print(f"Az utolsó mérési adat a megadott településről {ido[0][0]}:{ido[0][1]}-kor érkezett. ")
 # print(f"Az utolsó mérési adat a megadott településről {ido[-1][0]}:{ido[-1][1]}-kor érkezett. ")
+
+
+feladat(3)
+homerseklet = []
+for egyelem in metjelentes:
+    homerseklet.append(egyelem[-1])
+print(homerseklet)
+
+legk_hom = min(homerseklet)
+legn_hom = max(homerseklet)
+print(legk_hom, legn_hom)
+for egyelem in metjelentes:
+    if egyelem[-1] == legk_hom:
+        print(f"A legalacsonyabb hőmérséklet: {egyelem[0]} {egyelem[1]}:{egyelem[2]} {legk_hom} fok")
+        break
+
+for egyelem in metjelentes:
+    if egyelem[-1] == legn_hom:
+        print(f"A legmagasabb hőmérséklet: {egyelem[0]} {egyelem[1]}:{egyelem[2]} {legn_hom} fok")
+        break
