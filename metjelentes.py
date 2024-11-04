@@ -61,6 +61,31 @@ if not szelcsend: # == nem igaz TEHÁT hamis
 # not valami -> valami == False
 # valami -> valami == True
 
+feladat(5)
+
+telepulesek = []
+
+for egyelem in metjelentes:
+    if egyelem[0] not in telepulesek:
+        telepulesek.append(egyelem[0])
+print(telepulesek)
+
+for telep in telepulesek: # telep == "BP"
+    for egyelem in metjelentes:
+        
+
+"""
+BP Középhőmérséklet: 23; Hőmérséklet-ingadozás: 8 
+DC Középhőmérséklet: 29; Hőmérséklet-ingadozás: 15 
+SM Középhőmérséklet: 22; Hőmérséklet-ingadozás: 8 
+PA Középhőmérséklet: 21; Hőmérséklet-ingadozás: 7 
+SN Középhőmérséklet: 26; Hőmérséklet-ingadozás: 13 
+PR Középhőmérséklet: 21; Hőmérséklet-ingadozás: 8 
+BC NA; Hőmérséklet-ingadozás: 14 
+PP NA; Hőmérséklet-ingadozás: 6 
+KE NA; Hőmérséklet-ingadozás: 13
+"""
+
 
 feladat(6)
 
@@ -69,7 +94,6 @@ telepulesek = []
 for egyelem in metjelentes:
     if egyelem[0] not in telepulesek:
         telepulesek.append(egyelem[0])
-print(telepulesek)
 
 # list comp.-ben nem lehet 'not in' feltételt írni, hisz a lista folyamatosan íródik.
 for varos in telepulesek:
